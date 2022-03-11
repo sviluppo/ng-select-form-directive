@@ -1,0 +1,11 @@
+<ng-select
+  [id]="label"
+  [items]="observable$ | async"
+  [bindLabel]="bindLabel"
+  [bindValue]="bindValue"
+  [loading]="loading"
+  [typeahead]="observableInput$"
+  [placeholder]="label | titlecase"
+  (change)="select($event)"
+>
+</ng-select>

@@ -1,0 +1,20 @@
+<form class="form"
+      [formGroup]="form"
+      (ngSubmit)="submitForm()">
+
+  <custom-ng-select
+    formControlName="movie"
+    label="movie"
+    [loading]="moviesLoading"
+    [observable$]="movies$"
+    [observableInput$]="moviesInput$"
+    [bindLabel]="'title'"
+    [bindValue]="'id'"
+    (onSearch)="loadMovies()"
+  ></custom-ng-select>
+
+  <custom-input
+    formControlName="message"
+    label="message"
+  ></custom-input>
+</form>
